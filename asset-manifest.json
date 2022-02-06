@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/SaraZoarob.io/static/css/main.d25c364b.css",
+    "main.js": "/SaraZoarob.io/static/js/main.6c2c6237.js",
+    "static/js/787.28cb0dcd.chunk.js": "/SaraZoarob.io/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Hello.gif": "/SaraZoarob.io/static/media/Hello.ae786840d5b13f98a6db.gif",
+    "index.html": "/SaraZoarob.io/index.html",
+    "main.d25c364b.css.map": "/SaraZoarob.io/static/css/main.d25c364b.css.map",
+    "main.6c2c6237.js.map": "/SaraZoarob.io/static/js/main.6c2c6237.js.map",
+    "787.28cb0dcd.chunk.js.map": "/SaraZoarob.io/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d25c364b.css",
+    "static/js/main.6c2c6237.js"
+  ]
+}
