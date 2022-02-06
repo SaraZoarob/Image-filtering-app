@@ -1,0 +1,96 @@
+#item {
+	/* text-align: center; */
+	color: rgb(255, 255, 255);
+	font-size: 200%;
+	background-color: gainsboro;
+	height: 100%;
+	align-items: center;
+}
+
+#dropdown {
+	width: 100%;
+}
+
+#Select {
+	color: 'hsl(0, 0%, 40%)';
+	display: 'inline-block';
+	font-size: 12;
+	font-style: 'italic';
+	margin-top: 1em;
+}
+
+#selectFormat {
+	width: 80%;
+	font-weight: 20px;
+	border: 3px solid gainsboro;
+	border-radius: 5px;
+	text-align: center;
+	color: rgb(0, 119, 255);
+	background-color: gainsboro;
+	margin-bottom: 5px;
+}
+
+#logo {
+	width: 250px;
+	height: 100px;
+	margin-left: 30px;
+}
+
+#ApplyItem {
+	background-color: rgb(231, 231, 231);
+}
+
+#Menu {
+	background-color: rgb(231, 231, 231);
+	height: 100px;
+}
+
+.cancel {
+	background-image: linear-gradient(to right, #304352 0%, #d7d2cc 51%, #304352 100%)
+}
+
+.cancel {
+	border: 7px solid gainsboro;
+	width: 100%;
+	font-weight: 20px;
+	font-size: 150%;
+	text-align: center;
+	color: gainsboro;
+	border-radius: 10px;
+	background-color: white;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	box-shadow: 0 0 20px #eee;
+}
+
+.cancel:hover {
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-grad {
+	background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)
+}
+
+.btn-grad {
+	border: 7px solid gainsboro;
+	width: 100%;
+	font-weight: 20px;
+	font-size: 150%;
+	text-align: center;
+	color: gainsboro;
+	border-radius: 10px;
+	background-color: white;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	box-shadow: 0 0 20px #eee;
+}
+
+.btn-grad:hover {
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+}
