@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Image-filtering-app/static/css/main.74e7e341.css",
-    "main.js": "/Image-filtering-app/static/js/main.e2dfa0bf.js",
+    "main.js": "/Image-filtering-app/static/js/main.8bbdc895.js",
     "static/js/787.28cb0dcd.chunk.js": "/Image-filtering-app/static/js/787.28cb0dcd.chunk.js",
     "static/media/Hello.gif": "/Image-filtering-app/static/media/Hello.ae786840d5b13f98a6db.gif",
     "index.html": "/Image-filtering-app/index.html",
     "main.74e7e341.css.map": "/Image-filtering-app/static/css/main.74e7e341.css.map",
-    "main.e2dfa0bf.js.map": "/Image-filtering-app/static/js/main.e2dfa0bf.js.map",
+    "main.8bbdc895.js.map": "/Image-filtering-app/static/js/main.8bbdc895.js.map",
     "787.28cb0dcd.chunk.js.map": "/Image-filtering-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74e7e341.css",
-    "static/js/main.e2dfa0bf.js"
+    "static/js/main.8bbdc895.js"
   ]
 }
