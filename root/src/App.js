@@ -89,15 +89,15 @@ class App extends React.Component {
 
   handleChange(e) {
     this.setState({ selectedImage: e.target.value });
-    this.setState({ selectedImageUrl: "http://" + e.target.value });
-    this.setState({ editedImage: "http://" + e.target.value });
+    this.setState({ selectedImageUrl: "https://doc.cloudimg.io/"+e.target.value +"" });
+    this.setState({ editedImage: "https://doc.cloudimg.io/" + e.target.value +"" });
   }
   handleSelect(e) {
     this.setState({ Quality: e });
   }
 
   render() {
-    if (this.state.selectedImage === "SelectedImage") {
+    if (this.state.selectedImage === "SelectedImage")  {
       return (
         <div id="mainContainer">
           <NavBar id={1} />
