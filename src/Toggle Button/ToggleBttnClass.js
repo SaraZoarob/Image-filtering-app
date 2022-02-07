@@ -3,11 +3,11 @@ import Switch from "react-switch";
   const ToggleButton = ({ checked, onClickCallback }) => {
     return (
         
-        <div className="example">
+        <div >
         <label htmlFor="material-switch">
           <Switch
             checked={checked}
-            onChange={(e) => onClickCallback(e)}
+            onChange={onClickCallback}
             onColor="#86d3ff"
             onHandleColor="#2693e6"
             handleDiameter={30}

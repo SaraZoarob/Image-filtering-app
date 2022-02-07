@@ -1,6 +1,7 @@
 #item {
 	/* text-align: center; */
 	color: rgb(255, 255, 255);
+	text-align: center;
 	font-size: 200%;
 	background-color: gainsboro;
 	height: 100%;
@@ -45,44 +46,22 @@
 	height: 100px;
 }
 
-.cancel {
-	background-image: linear-gradient(to right, #304352 0%, #d7d2cc 51%, #304352 100%)
-}
-
-.cancel {
-	border: 7px solid gainsboro;
-	width: 100%;
-	font-weight: 20px;
-	font-size: 150%;
-	text-align: center;
-	color: gainsboro;
-	border-radius: 10px;
-	background-color: white;
-	text-transform: uppercase;
-	transition: 0.5s;
-	background-size: 200% auto;
-	box-shadow: 0 0 20px #eee;
-}
-
-.cancel:hover {
-	background-position: right center;
-	color: #fff;
-	text-decoration: none;
-}
-
 .btn-grad {
 	background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)
 }
 
 .btn-grad {
 	border: 7px solid gainsboro;
+	height: 50%;
 	width: 100%;
+	top: 50%;
+	bottom: 50%;
+	transform: translate(0%,50%);
 	font-weight: 20px;
-	font-size: 150%;
 	text-align: center;
+	font-size: 80%;
 	color: gainsboro;
 	border-radius: 10px;
-	background-color: white;
 	text-transform: uppercase;
 	transition: 0.5s;
 	background-size: 200% auto;

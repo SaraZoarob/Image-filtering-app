@@ -64,7 +64,7 @@ const NavBar = ({
               valueLabelDisplay="auto"
               step={10}
               marks
-              min={10}
+              min={0}
               max={100}
               onChange={onSliderChange}
             />
@@ -83,12 +83,9 @@ const NavBar = ({
         </Nav.Item>
 
         <Nav.Item>
-          <Nav.Item id="ApplyItem">
+          <Nav.Item id="item">
             <button onClick={onApplyCallBack} className="btn-grad">
               Apply
-            </button>
-            <button onClick={onCancelCallBack} className="cancel">
-              Cancel
             </button>
           </Nav.Item>
         </Nav.Item>

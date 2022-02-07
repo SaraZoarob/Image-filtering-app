@@ -54,31 +54,28 @@ class App extends React.Component {
       });
   }
   setQuality(e, data) {
+    e.preventDefault()
     this.setState({ Quality: data });
   }
   setFormat(e) {
     this.setState({ Format: e.target.value });
-    this.ApplyFormats();
   }
   setInfo(infoChecked) {
     this.setState({ infoChecked });
     this.infoCheckedflag = !this.state.infoChecked;
   }
+
   ApplyFormats() {
     if (this.infoCheckedflag === undefined) {
-      this.infoCheckedflag = false;
+      this.infoCheckedflag = 0;
     } else if (this.infoCheckedflag === true) {
       this.infoCheckedflag = 1;
     } else if (this.infoCheckedflag === false) {
       this.infoCheckedflag = 0;
     }
-    console.log(this.state.Quality);
-    console.log(this.state.Format);
-    console.log(this.infoCheckedflag);
     this.setState({
       editedImage:
-        "https://doc.cloudimg.io/" +
-        this.state.selectedImageUrl +
+        "https://doc.cloudimg.io/" + this.state.selectedImageUrl +
         "?force_format=" +
         this.state.Format +
         "&ci_info=" +
@@ -88,6 +85,7 @@ class App extends React.Component {
         " ",
     });
   }
+
 
   handleChange(e) {
     this.setState({ selectedImage: e.target.value });
@@ -150,6 +148,7 @@ class App extends React.Component {
             {/* Add the values to Navbar */}
             <NavBar
               id={2}
+              Quality={this.state.Quality}
               formats={this.state.FormatsArr}
               format={this.state.Format}
               onSliderChange={this.setQuality}
