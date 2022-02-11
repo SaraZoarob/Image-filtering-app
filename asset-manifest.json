@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Image-filtering-app/static/css/main.fe8160c7.css",
-    "main.js": "/Image-filtering-app/static/js/main.a9800825.js",
-    "static/js/787.28cb0dcd.chunk.js": "/Image-filtering-app/static/js/787.28cb0dcd.chunk.js",
-    "static/media/HelloWave.gif": "/Image-filtering-app/static/media/HelloWave.e1bdb0dc2ebb8a9ad3b1.gif",
-    "index.html": "/Image-filtering-app/index.html",
-    "main.fe8160c7.css.map": "/Image-filtering-app/static/css/main.fe8160c7.css.map",
-    "main.a9800825.js.map": "/Image-filtering-app/static/js/main.a9800825.js.map",
-    "787.28cb0dcd.chunk.js.map": "/Image-filtering-app/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/Image-filtering/static/css/main.fe8160c7.css",
+    "main.js": "/Image-filtering/static/js/main.e2cb71ad.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Image-filtering/static/js/787.28cb0dcd.chunk.js",
+    "static/media/HelloWave.gif": "/Image-filtering/static/media/HelloWave.e1bdb0dc2ebb8a9ad3b1.gif",
+    "index.html": "/Image-filtering/index.html",
+    "main.fe8160c7.css.map": "/Image-filtering/static/css/main.fe8160c7.css.map",
+    "main.e2cb71ad.js.map": "/Image-filtering/static/js/main.e2cb71ad.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Image-filtering/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe8160c7.css",
-    "static/js/main.a9800825.js"
+    "static/js/main.e2cb71ad.js"
   ]
 }
