@@ -43,16 +43,16 @@ const Slider = ({leftImage, rightImage}) => {
           width:'100%',
           pointerEvents: 'none'
          }}
-          src={leftImage}
-          alt={leftImage}
+          src={rightImage}
+          alt={rightImage}
        />
        <img className="Top-image" 
            style={{
             pointerEvents: 'none',
             clipPath: 'polygon(0 0, '+imageSlidePercent * 100+'% 0,'+imageSlidePercent *100+'% 100%,0 100%)' 
             }}
-            src={rightImage}
-            alt=""
+            src={leftImage}
+            alt={leftImage}
           />
           <div style ={{left:''+imageSlidePercent *100+'%'}}
             className="Slider-container" 

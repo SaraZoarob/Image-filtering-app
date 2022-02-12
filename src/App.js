@@ -70,6 +70,7 @@ class App extends React.Component{
       this.setState({ Quality: data });
     }
     setFormat(e) {
+      
       this.setState({ Format: e.target.value });
     }
     setInfo(infoChecked) {
@@ -79,15 +80,18 @@ class App extends React.Component{
     setLeftQuality(e, data) {
       e.preventDefault()
       this.setState({ leftQuality: data });
+      console.log(this.state.leftQuality);
     }
     setLeftFormat(e) {
+      console.log(this.state.infoCheckedflag);
       this.setState({ leftFormat: e.target.value });
     }
-    setLeftInfo(infoChecked) {
-      this.setState({ infoChecked });
+    setLeftInfo(leftInfoChecked) {
+      this.setState({leftInfoChecked});
       this.leftInfoCheckedflag = !this.state.leftInfoChecked;
     }
     ApplyRightFormats() {
+      console.log(this.state.infoCheckedflag);
       if (this.infoCheckedflag === undefined) {
         this.infoCheckedflag = 0;
       } else if (this.infoCheckedflag) {
@@ -106,7 +110,7 @@ class App extends React.Component{
           this.state.Quality +
           " ",
       });
-      console.log(this.state.leftImageUrl);
+      console.log(this.state.rightImageUrl);
     }
     ApplyLeftFormats() {
       if (this.leftInfoCheckedflag === undefined) {
@@ -127,6 +131,7 @@ class App extends React.Component{
           this.state.leftQuality +
           " ",
       });
+      console.log('left',this.state.leftImageUrl);
     }
     
 
@@ -134,16 +139,8 @@ class App extends React.Component{
     if(this.state.selectedImage === "selectedImage"){
       return(
         <div>     
-         <WelcomePage Text="Please select an image to continue" ImagesInfo={this.state.values}
+         <WelcomePage id={1} Text="Please select an image to continue" ImagesInfo={this.state.values}
           selectedImage={this.state.leftImageUrl} onSelectCallBack={this.handleSelect}
-          Quality={this.state.Quality}
-          formats={this.state.Formats}
-          format={this.state.Format}
-          onQualityChange={this.setQuality}
-          infoCheck={this.state.infoChecked}
-          onApplyCallBack={this.ApplyRightFormats}
-          onFormatCallback={this.setFormat}
-          onInfoCallBack={this.setInfo}
           />
          <div className='filter-Cover'></div>
           <img
@@ -157,20 +154,19 @@ class App extends React.Component{
     else{
       return(
         <div>     
-        <WelcomePage Text="Edit formats and view your changes or Choose another image" ImagesInfo={this.state.values}
+        <WelcomePage id ={2}Text="Edit formats and view your changes or Choose another image" ImagesInfo={this.state.values}
           selectedImage={this.state.leftImageUrl} onSelectCallBack={this.handleSelect}
           formats={this.state.Formats}
           format={this.state.Format}
           Quality={this.state.Quality}
           infoCheck={this.state.infoChecked}
           leftFormat={this.state.leftFormat}
-          leftQuality={this.state.leftQuality}
-          leftInfoChecked={this.state.leftInfoChecked}
+          leftInfoCheck={this.state.leftInfoChecked}
           onApplyRightCallBack={this.ApplyRightFormats}
           onApplyLeftCallBack={this.ApplyLeftFormats}
           onLeftFormatCallBack={this.setLeftFormat}
           onLeftInfoCallBack={this.setLeftInfo}
-          OnLeftQualiyChange={this.setLeftQuality}
+          OnLeftQualityChange={this.setLeftQuality}
           onFormatCallback={this.setFormat}
           onInfoCallBack={this.setInfo}
           onQualityChange={this.setQuality}
