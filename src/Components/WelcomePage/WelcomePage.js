@@ -19,7 +19,7 @@ if(id===1){
               ImagesInfo.map((option) => (
               <option key={option.id} value={option.src}>{option.title}</option>))
               }
-           </select>
+            </select>
         </div>
         </div>
         </div>
