@@ -1,7 +1,7 @@
 import './WelcomePage.css';
 import { Slider } from "@mui/material";
 import { ToggleButton } from '../ToggleButton/ToggleBttnClass';
-import logo from './CloudImageLogo.png';
+import logo from '../../Assets/CloudImageLogo.png';
 const WelcomePage=({id,leftFormat,leftInfoCheck,onLeftFormatCallBack,onLeftInfoCallBack,OnLeftQualityChange,onApplyRightCallBack, onApplyLeftCallBack, onQualityChange, infoCheck, onInfoCallBack,format, onFormatCallback, formats, Text, ImagesInfo,selectedImage, onSelectCallBack})=> {
 if(id===1){
   return(

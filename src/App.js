@@ -144,10 +144,10 @@ class App extends React.Component{
           />
          <div className='filter-Cover'></div>
           <img
-            className='Image-container'
+            className="WelcomeImage-container"
             src={WelcomeImage}
             alt="OriginalPhoto"
-          />
+           />
         </div>
       )
     }
@@ -172,7 +172,8 @@ class App extends React.Component{
           onQualityChange={this.setQuality}
 
           />
-          <Slider leftImage={this.state.leftImageUrl} rightImage={this.state.rightImageUrl}/>
+          <Slider
+           leftImage={this.state.leftImageUrl} rightImage={this.state.rightImageUrl}/>
          </div>
        )
     }

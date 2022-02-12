@@ -6,3 +6,11 @@
 	left: 15%;
 	background-color: rgb(255, 255, 255);
 }
+.WelcomeImage-container {
+	height: 75.2%;
+	user-select: none;
+	width: 50%;
+	position: absolute;
+	inset: 25% 0% 0% 50%;
+	transform: translate(-50%);
+  }
