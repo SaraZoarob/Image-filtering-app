@@ -142,7 +142,6 @@ class App extends React.Component{
          <WelcomePage id={1} Text="Please select an image to continue" ImagesInfo={this.state.values}
           selectedImage={this.state.leftImageUrl} onSelectCallBack={this.handleSelect}
           />
-         <div className='filter-Cover'></div>
           <img
             className="WelcomeImage-container"
             src={WelcomeImage}
