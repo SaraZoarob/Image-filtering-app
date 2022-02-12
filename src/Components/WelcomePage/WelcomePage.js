@@ -1,11 +1,13 @@
 import './WelcomePage.css';
 import { Slider } from "@mui/material";
 import { ToggleButton } from '../ToggleButton/ToggleBttnClass';
+import logo from './CloudImageLogo.png';
 const WelcomePage=({id,leftFormat,leftInfoCheck,onLeftFormatCallBack,onLeftInfoCallBack,OnLeftQualityChange,onApplyRightCallBack, onApplyLeftCallBack, onQualityChange, infoCheck, onInfoCallBack,format, onFormatCallback, formats, Text, ImagesInfo,selectedImage, onSelectCallBack})=> {
 if(id===1){
   return(
         <div className='Background-container'>
         <div className='Top-menu'>
+          <img className='Icon' src={logo} alt='logo'></img>
         </div>
         <div className='Center-container'>
           <div className='Text'>
@@ -27,7 +29,9 @@ if( id === 2){
 return (
   <div>
     <div className='Background-container'>
-      <div className='Top-menu'></div>
+      <div className='Top-menu'>
+      <img className='Icon' src={logo} alt='logo'></img>
+      </div>
       <div className='Center-container'>
         <div className='Text'>
           {Text}
