@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/Image-filtering-app/static/css/main.9c9af5eb.css",
-    "main.js": "/Image-filtering-app/static/js/main.de5458c4.js",
+    "main.css": "/Image-filtering-app/static/css/main.0b33679f.css",
+    "main.js": "/Image-filtering-app/static/js/main.4c5acec1.js",
     "static/js/787.28cb0dcd.chunk.js": "/Image-filtering-app/static/js/787.28cb0dcd.chunk.js",
     "static/media/HelloWave.gif": "/Image-filtering-app/static/media/HelloWave.e1bdb0dc2ebb8a9ad3b1.gif",
+    "static/media/CloudImageLogo.png": "/Image-filtering-app/static/media/CloudImageLogo.a60f3d19cc0402820902.png",
     "index.html": "/Image-filtering-app/index.html",
-    "main.9c9af5eb.css.map": "/Image-filtering-app/static/css/main.9c9af5eb.css.map",
-    "main.de5458c4.js.map": "/Image-filtering-app/static/js/main.de5458c4.js.map",
+    "main.0b33679f.css.map": "/Image-filtering-app/static/css/main.0b33679f.css.map",
+    "main.4c5acec1.js.map": "/Image-filtering-app/static/js/main.4c5acec1.js.map",
     "787.28cb0dcd.chunk.js.map": "/Image-filtering-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c9af5eb.css",
-    "static/js/main.de5458c4.js"
+    "static/css/main.0b33679f.css",
+    "static/js/main.4c5acec1.js"
   ]
 }
