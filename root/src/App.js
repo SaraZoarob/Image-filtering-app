@@ -1,23 +1,22 @@
+import WelcomeImage from './Assets/HelloWave.gif';
+import {WelcomePage} from './Components/WelcomePage/WelcomePage';
 import React from "react";
 import "./App.css";
-import { NavBar } from "./NavBar/NavbarClass.js";
-import ReactCompareImage from "react-compare-image";
-import HelloGif from "./Assets/Hello.gif";
-
-class App extends React.Component {
+import {Slider} from "./Components/Slider/Slider.js";
+class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
       values: [],
-      selectedImage: "SelectedImage",
-      editedImage: "editedImage",
-      selectedImageUrl: HelloGif,
+      selectedImage: "selectedImage",
+      leftImageUrl: "leftImage",
+      rightImageUrl: "rightImage",
       Format: "WebP",
       infoChecked: false,
       infoCheckedflag: false,
       Quality: 0,
       flag: false,
-      FormatsArr: [
+      Formats: [
         {
           id: 1,
           type: "WebP",
@@ -32,15 +31,19 @@ class App extends React.Component {
         },
       ],
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
     this.setFormat = this.setFormat.bind(this);
     this.setInfo = this.setInfo.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.setQuality = this.setQuality.bind(this);
-    this.ApplyFormats = this.ApplyFormats.bind(this);
+    this.ApplyRightFormats = this.ApplyRightFormats.bind(this);
+    this.ApplyLeftFormats = this.ApplyLeftFormats.bind(this);
+
   }
 
+
   componentDidMount() {
+    
     fetch(
       'https://scaleflex.cloudimg.io/v7/01_test/sara_sample.json?vh=631222&func=proxy'
     )
@@ -49,126 +52,114 @@ class App extends React.Component {
       })
       .then((json) => {
         this.setState({
-          values: json,
+          values: json.map((item, id) => Object.assign(item, {id})),
         });
-      });
-  }
-  setQuality(e, data) {
-    e.preventDefault()
-    this.setState({ Quality: data });
-  }
-  setFormat(e) {
-    this.setState({ Format: e.target.value });
-  }
-  setInfo(infoChecked) {
-    this.setState({ infoChecked });
-    this.infoCheckedflag = !this.state.infoChecked;
+      }); 
   }
 
-  ApplyFormats() {
-    if (this.infoCheckedflag === undefined) {
-      this.infoCheckedflag = 0;
-    } else if (this.infoCheckedflag === true) {
-      this.infoCheckedflag = 1;
-    } else if (this.infoCheckedflag === false) {
-      this.infoCheckedflag = 0;
+    handleSelect(e) {
+    this.setState({ selectedImage:"https://doc.cloudimg.io/"+e.target.value+"",leftImageUrl: "https://doc.cloudimg.io/"+e.target.value+"", rightImageUrl: "https://doc.cloudimg.io/"+e.target.value+"" });
     }
-    this.setState({
-      editedImage:
-        "https://doc.cloudimg.io/" + this.state.selectedImageUrl +
-        "?force_format=" +
-        this.state.Format +
-        "&ci_info=" +
-        this.infoCheckedflag +
-        "&q=" +
-        this.state.Quality +
-        " ",
-    });
-  }
-
-
-  handleChange(e) {
-    this.setState({ selectedImage: e.target.value });
-    this.setState({ selectedImageUrl: "https://doc.cloudimg.io/"+e.target.value +"" });
-    this.setState({ editedImage: "https://doc.cloudimg.io/" + e.target.value +"" });
-  }
-  handleSelect(e) {
-    this.setState({ Quality: e });
-  }
+    setQuality(e, data) {
+      e.preventDefault()
+      this.setState({ Quality: data });
+    }
+    setFormat(e) {
+      this.setState({ Format: e.target.value });
+      console.log(this.infoCheckedflag);
+    }
+    setInfo(infoChecked) {
+      this.setState({ infoChecked });
+      this.infoCheckedflag = !this.state.infoChecked;
+    }
+    ApplyRightFormats() {
+      if (this.infoCheckedflag === undefined) {
+        this.infoCheckedflag = 0;
+      } else if (this.infoCheckedflag) {
+        this.infoCheckedflag = 1;
+      } else{
+        this.infoCheckedflag = 0;
+      }
+      this.setState({
+        rightImageUrl:
+          "https://doc.cloudimg.io/" + this.state.selectedImage+
+          "?force_format=" +
+          this.state.Format +
+          "&ci_info=" +
+          this.infoCheckedflag +
+          "&q=" +
+          this.state.Quality +
+          " ",
+      });
+      console.log(this.state.leftImageUrl);
+    }
+    ApplyLeftFormats() {
+      console.log("left");
+      if (this.infoCheckedflag === undefined) {
+        this.infoCheckedflag = 0;
+      } else if (this.infoCheckedflag) {
+        this.infoCheckedflag = 1;
+      } else{
+        this.infoCheckedflag = 0;
+      }
+      this.setState({
+        leftImageUrl:
+          "https://doc.cloudimg.io/" + this.state.selectedImage+
+          "?force_format=" +
+          this.state.Format +
+          "&ci_info=" +
+          this.infoCheckedflag +
+          "&q=" +
+          this.state.Quality +
+          " ",
+      });
+    }
+    
 
   render() {
-    if (this.state.selectedImage === "SelectedImage")  {
-      return (
-        <div id="mainContainer">
-          <NavBar id={1} />
-          <div className="background"></div>
-          <div className="center">
-            <h1>Welcome To Our App!</h1>
-            <h1>Please select a photo from below</h1>
-            <select
-              id="style"
-              value={this.state.selectedImage}
-              onChange={this.handleChange}
-            >
-              {this.state.values.map((option) => (
-                <option value={option.src}>{option.title}</option>
-              ))}
-            </select>
-            <img
-              id="Gifimage"
-              src={this.state.selectedImageUrl}
-              alt="OriginalPhoto"
-            />
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div id="mainConatiner">
-          <NavBar id={1} />
-          <div
-            className="background"
-            src={this.state.selectedImageUrl}
+    if(this.state.selectedImage === "selectedImage"){
+      return(
+        <div>     
+         <WelcomePage Text="Please select an image to continue" ImagesInfo={this.state.values}
+          selectedImage={this.state.leftImageUrl} onSelectCallBack={this.handleSelect}
+          Quality={this.state.Quality}
+          formats={this.state.Formats}
+          format={this.state.Format}
+          onQualityChange={this.setQuality}
+          infoCheck={this.state.infoChecked}
+          onApplyCallBack={this.ApplyRightFormats}
+          onFormatCallback={this.setFormat}
+          onInfoCallBack={this.setInfo}
+          />
+         <div className='filter-Cover'></div>
+          <img
+            className='Image-container'
+            src={WelcomeImage}
             alt="OriginalPhoto"
-          ></div>
-          <div className="center">
-            <h1>
-              Toggle The Filters, Choose The Quality And View Your Changes!
-            </h1>
-
-            <select
-              id="style"
-              value={this.state.selectedImage}
-              onChange={this.handleChange}
-            >
-              {this.state.values.map((option) => (
-                <option value={option.src}>{option.title}</option>
-              ))}
-            </select>
-            {/* Add the values to Navbar */}
-            <NavBar
-              id={2}
-              Quality={this.state.Quality}
-              formats={this.state.FormatsArr}
-              format={this.state.Format}
-              onSliderChange={this.setQuality}
-              OnSelectCallBack={this.handleSelect}
-              infoCheck={this.state.infoChecked}
-              onFormatCallback={this.setFormat}
-              onApplyCallBack={this.ApplyFormats}
-              onInfoCallBack={this.setInfo}
-            />
-            <ReactCompareImage
-              id="photoCompare"
-              sliderLineWidth="2px"
-              hover="true"
-              leftImage={this.state.editedImage}
-              rightImage={this.state.selectedImageUrl}
-            />
-          </div>
+          />
         </div>
-      );
+      )
     }
-  }
+    else{
+      return(
+        <div>     
+        <WelcomePage Text="Edit formats and view your changes or Choose another image" ImagesInfo={this.state.values}
+          selectedImage={this.state.leftImageUrl} onSelectCallBack={this.handleSelect}
+          Quality={this.state.Quality}
+          formats={this.state.Formats}
+          format={this.state.Format}
+          infoCheck={this.state.infoChecked}
+          onApplyRightCallBack={this.ApplyRightFormats}
+          onApplyLeftCallBack={this.ApplyLeftFormats}
+          onFormatCallback={this.setFormat}
+          onInfoCallBack={this.setInfo}
+          onSliderChange={this.setQuality}
+          />
+          <Slider leftImage={this.state.leftImageUrl} rightImage={this.state.rightImageUrl}/>
+         </div>
+       )
+    }
+    }
 }
+
 export default App;

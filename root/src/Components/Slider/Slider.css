@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+.Image-container {
+  user-select: none;
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  inset: 40% 0% 0% 50%;
+  transform: translate(-50%);
+}
+.Slider{
+  position: relative;
+  height: 100%;
+}
+.Slider-line{
+  position: absolute;
+  background-color:rgb(255, 255, 255);
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  width: 1px;
+  left: 49.5%
+}
+.Slider-handle{
+position: absolute;
+height: 4vh;
+width: 4vh;
+top: 50%;
+right: -2vh;
+border-radius: 100%;
+background-color: rgb(255, 255, 255);
+box-shadow: 2vh;
+}
+
+.Top-image{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0% 0% 0% 0%; 
+}
+.Slider-container{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+
+

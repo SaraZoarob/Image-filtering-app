@@ -4,7 +4,6 @@ import Switch from "react-switch";
     return (
         
         <div >
-        <label htmlFor="material-switch">
           <Switch
             checked={checked}
             onChange={onClickCallback}
@@ -20,7 +19,6 @@ import Switch from "react-switch";
             className="react-switch"
             id="material-switch"
           />
-        </label>
       </div>
     );
    };

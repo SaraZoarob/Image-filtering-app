@@ -1,0 +1,146 @@
+
+  
+  .Background-container {
+    background-color: rgb(243, 243, 243);
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      margin: auto;
+  }
+  .Top-menu{
+    width: 100%;
+    background-color: rgb(212, 212, 212);
+    height: 10%;
+  }
+  .Quality-label{
+    width: 20%;
+    float: left;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid white;
+    background-color: #57c0dd;
+    color: aliceblue; 
+  }
+
+  .Center-container {
+      height: 90%;
+      background-color: rgb(255, 255, 255);
+      width: 70%;
+      color: rgb(192, 192, 192);
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%);
+      top: 10%;
+  }
+  
+  .Text{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 200%;
+    background-color: #dce2e4;
+    height: 10%;
+    width: 100%;
+    margin-bottom: 0.5%;
+  }
+  @media only screen and (max-width: 1240px) {
+    .Text {
+      font-size: 150%;
+    }
+    label{
+      font-size: 50%;
+    }
+  }
+
+  .Select-images{
+    position: absolute;
+    border-color: grey;
+    color: gainsboro;
+  	font-size: 180%;
+    text-align: center;
+  	font-style: 'italic';
+    right: 25%;
+    width: 50%;
+    height: 100%;
+  }
+  .Select-formats{
+    float: left;
+    position: relative;
+    width: 99%;
+    font-size: 100%;
+    height: 122%;
+    text-align: center;
+    border: 0;
+    background-color: #57c0dd;
+    color: aliceblue;
+  }
+  .Settings-label
+  {
+    width: 10%;
+    float: left;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid white;
+    background-color: #57c0dd;
+    color: aliceblue; 
+  }
+  .Formats-label{
+    width: 20%;
+    float: left;
+    position: relative;
+    text-align: center;
+    background-color: #57c0dd;
+    color: aliceblue; 
+  }
+
+  .Select-container{
+    position: relative;
+    margin-bottom: 0.5%;
+    height: 5%;
+    width: 100%;
+  }
+  .Filter-container{
+    position: relative;
+    background-color: #57c0dd;
+    margin-bottom: 0.5%;
+    height: 8%;
+    width: 100%;
+  }
+  .btn-grad {
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)
+  }
+  
+  .btn-grad {
+    border: 0;
+    width: 20%;
+    float: left;
+    position: relative;
+    text-align: center;
+    background-color: #57c0dd;
+    color: aliceblue; 
+    left: 10%;
+    height: 100%;
+    font-weight: 20px;
+    text-align: center;
+    color: gainsboro;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+  }
+  
+  .btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  
+  
