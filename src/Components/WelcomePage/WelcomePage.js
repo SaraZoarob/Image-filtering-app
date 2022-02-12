@@ -1,7 +1,7 @@
 import './WelcomePage.css';
 import { Slider } from "@mui/material";
 import { ToggleButton } from '../ToggleButton/ToggleBttnClass';
-const WelcomePage=({onApplyRightCallBack, onApplyLeftCallBack, onSliderChange, infoCheck, onInfoCallBack,format, onFormatCallback, formats, Text, ImagesInfo,selectedImage, onSelectCallBack})=> {
+const WelcomePage=({onApplyRightCallBack, onApplyLeftCallBack, onQualityChange, infoCheck, onInfoCallBack,format, onFormatCallback, formats, Text, ImagesInfo,selectedImage, onSelectCallBack})=> {
   return (
     <div>
       <div className='Background-container'>
@@ -41,7 +41,7 @@ const WelcomePage=({onApplyRightCallBack, onApplyLeftCallBack, onSliderChange, i
               marks
               min={0}
               max={100}
-              onChange={onSliderChange}
+              onChange={onQualityChange}
             />
               </label>
               <button onClick={onApplyLeftCallBack} className="btn-grad">
@@ -71,7 +71,7 @@ const WelcomePage=({onApplyRightCallBack, onApplyLeftCallBack, onSliderChange, i
               marks
               min={0}
               max={100}
-              onChange={onSliderChange}
+              onChange={onQualityChange}
             />
               </label>
               <button onClick={onApplyRightCallBack} className="btn-grad">

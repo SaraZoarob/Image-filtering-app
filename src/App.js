@@ -15,7 +15,10 @@ class App extends React.Component{
       infoChecked: false,
       infoCheckedflag: false,
       Quality: 0,
-      flag: false,
+      leftFormat: "WebP",
+      leftInfoChecked: false,
+      leftInfoCheckedflag: false,
+      leftQuality: 0,
       Formats: [
         {
           id: 1,
@@ -34,8 +37,10 @@ class App extends React.Component{
     this.handleSelect = this.handleSelect.bind(this);
     this.setFormat = this.setFormat.bind(this);
     this.setInfo = this.setInfo.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
     this.setQuality = this.setQuality.bind(this);
+    this.setLeftFormat = this.setLeftFormat.bind(this);
+    this.setLeftInfo = this.setLeftInfo.bind(this);
+    this.setLeftQuality = this.setLeftQuality.bind(this);
     this.ApplyRightFormats = this.ApplyRightFormats.bind(this);
     this.ApplyLeftFormats = this.ApplyLeftFormats.bind(this);
 
@@ -66,11 +71,21 @@ class App extends React.Component{
     }
     setFormat(e) {
       this.setState({ Format: e.target.value });
-      console.log(this.infoCheckedflag);
     }
     setInfo(infoChecked) {
       this.setState({ infoChecked });
       this.infoCheckedflag = !this.state.infoChecked;
+    }
+    setLeftQuality(e, data) {
+      e.preventDefault()
+      this.setState({ leftQuality: data });
+    }
+    setLeftFormat(e) {
+      this.setState({ leftFormat: e.target.value });
+    }
+    setLeftInfo(infoChecked) {
+      this.setState({ infoChecked });
+      this.leftInfoCheckedflag = !this.state.leftInfoChecked;
     }
     ApplyRightFormats() {
       if (this.infoCheckedflag === undefined) {
@@ -94,23 +109,22 @@ class App extends React.Component{
       console.log(this.state.leftImageUrl);
     }
     ApplyLeftFormats() {
-      console.log("left");
-      if (this.infoCheckedflag === undefined) {
-        this.infoCheckedflag = 0;
-      } else if (this.infoCheckedflag) {
-        this.infoCheckedflag = 1;
+      if (this.leftInfoCheckedflag === undefined) {
+        this.leftInfoCheckedflag = 0;
+      } else if (this.leftInfoCheckedflag) {
+        this.leftInfoCheckedflag = 1;
       } else{
-        this.infoCheckedflag = 0;
+        this.leftInfoCheckedflag = 0;
       }
       this.setState({
         leftImageUrl:
           "https://doc.cloudimg.io/" + this.state.selectedImage+
           "?force_format=" +
-          this.state.Format +
+          this.state.leftFormat +
           "&ci_info=" +
-          this.infoCheckedflag +
+          this.leftInfoCheckedflag +
           "&q=" +
-          this.state.Quality +
+          this.state.leftQuality +
           " ",
       });
     }
@@ -145,15 +159,22 @@ class App extends React.Component{
         <div>     
         <WelcomePage Text="Edit formats and view your changes or Choose another image" ImagesInfo={this.state.values}
           selectedImage={this.state.leftImageUrl} onSelectCallBack={this.handleSelect}
-          Quality={this.state.Quality}
           formats={this.state.Formats}
           format={this.state.Format}
+          Quality={this.state.Quality}
           infoCheck={this.state.infoChecked}
+          leftFormat={this.state.leftFormat}
+          leftQuality={this.state.leftQuality}
+          leftInfoChecked={this.state.leftInfoChecked}
           onApplyRightCallBack={this.ApplyRightFormats}
           onApplyLeftCallBack={this.ApplyLeftFormats}
+          onLeftFormatCallBack={this.setLeftFormat}
+          onLeftInfoCallBack={this.setLeftInfo}
+          OnLeftQualiyChange={this.setLeftQuality}
           onFormatCallback={this.setFormat}
           onInfoCallBack={this.setInfo}
-          onSliderChange={this.setQuality}
+          onQualityChange={this.setQuality}
+
           />
           <Slider leftImage={this.state.leftImageUrl} rightImage={this.state.rightImageUrl}/>
          </div>
