@@ -15,6 +15,13 @@
     width: 25%;
     height: 25%;
   }
+  .Icon{
+    position: relative;
+    top: 5%;
+    width: 20%;
+    left: 2%;
+    height: 80%;
+  }
   .Top-menu{
     width: 100%;
     background-color: rgb(70, 144, 179);
@@ -147,3 +154,6 @@
     color: #fff;
     text-decoration: none;
   }
+
+  
+  
