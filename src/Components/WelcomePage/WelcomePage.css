@@ -9,6 +9,12 @@
       position: absolute;
       margin: auto;
   }
+ 
+  .logo{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+  }
   .Top-menu{
     width: 100%;
     background-color: rgb(212, 212, 212);

@@ -5,7 +5,8 @@ const WelcomePage=({id,leftFormat,leftInfoCheck,onLeftFormatCallBack,onLeftInfoC
 if(id===1){
   return(
         <div className='Background-container'>
-        <div className='Top-menu'></div>
+        <div className='Top-menu'>
+        </div>
         <div className='Center-container'>
           <div className='Text'>
             {Text}
